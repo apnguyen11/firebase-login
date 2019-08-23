@@ -9,27 +9,17 @@
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
 </head>
 <body>
-        <div id="login_div" class="main-div">
-           
-                <h1>My Login Site</h1>
-            
-          
+        <div id="login_div" class="main-div">          
+                <h1>My Login Site</h1>     
                 <input type="email" placeholder="Email..." id="email_field"  />
                 <input type="password" placeholder="Password..." id="password_field"/>
                 <div style="display: flex;  ">
                     <button id="btnLogin" onclick="login()">Submit</button>
-                    <button id="btnSignUp">Sign Up</button>
-                </div>
-                
-                
-           
+                    <button id="btnSignUp" onclick="signUp()">Sign Up</button>
+                </div>  
             </div>
-            
-
-          
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
-
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
 
@@ -55,3 +45,4 @@
 
 </body>
 </html>
+

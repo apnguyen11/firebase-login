@@ -3,24 +3,24 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
     //   window.location.assign("dashboard.html")
-        console.log(user)
+        console.log(user, "This is the logged in user")
+        // btnLogout.addEventListener('click', function(){
+        //     window.location.assign("login.html")
+        // })
     } else {
       // No user is signed in.
-    //   window.location.assign("login.html")
       
       console.log("not logged in")
      
     }
   });
 
-function login(e){
-    const email = userEmail.value;
-    const pass = userPass.value;
+function login(){
+    var email = userEmail.value;
+    var pass = userPass.value;
     console.log("clicked log in")
-    const promise = firebase.auth().signInWithEmailAndPassword(email, pass)
+    var promise = firebase.auth().signInWithEmailAndPassword(email, pass)
 
-    
-    
     promise
     .then(() => {
             window.location.assign("dashboard.html")
@@ -39,18 +39,27 @@ const btnLogout = document.getElementById("btnLogout")
 const btnSignUp = document.getElementById('btnSignUp')
 
 // add signup event
-btnSignUp.addEventListener('click', e => {
+function signUp(e) {
     //todo: check 4 real email
-    const email = userEmail.value;
-    const pass = userPass.value;
-    window.alert("clicked")
-    const promise = firebase.auth().createUserWithEmailAndPassword(email, pass)
+    var email = userEmail.value;
+    var pass = userPass.value;
+    var promise = firebase.auth().createUserWithEmailAndPassword(email, pass);
+    promise.catch(e => console.log(e.message))
     
-    promise
-        .catch(window.alert(e.message))
-})
+}  
 
-// btnLogout.addEventListener('click', e => {
-//     firebase.auth().signOut();
-// });
+
+
+// signUp().then((message) => {
+//     alert(message);
+// }).catch((error) => {
+//     alert(error);
+// })
+    // var promise = firebase.auth().createUserWithEmailAndPassword(email, pass)
+    
+btnLogout.addEventListener('click', e => {
+    firebase.auth().signOut();
+    window.location.assign("login.html")
+
+});
 

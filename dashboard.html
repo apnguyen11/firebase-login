@@ -19,11 +19,30 @@
                 <button id="btnLogout">Log Out</button>
            
             </div>
-            <script src="/__/firebase/6.4.1/firebase-app.js"></script>
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
 
-            <!-- Add Firebase products that you want to use -->
-            <script src="/__/firebase/6.4.1/firebase-auth.js"></script>
-            <script src="/__/firebase/6.4.1/firebase-firestore.js"></script>
-    <script src="index.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA2-WiU92TS0NR9M53GLuNvMl-qAbrpBHg",
+    authDomain: "fir-practice-login.firebaseapp.com",
+    databaseURL: "https://fir-practice-login.firebaseio.com",
+    projectId: "fir-practice-login",
+    storageBucket: "",
+    messagingSenderId: "132117579593",
+    appId: "1:132117579593:web:64ffdd2771314b21"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-firestore.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
