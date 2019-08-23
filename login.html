@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+</head>
+<body>
+        <div id="login_div" class="main-div">
+           
+                <h1>My Login Site</h1>
+            
+          
+                <input type="email" placeholder="Email..." id="email_field"  />
+                <input type="password" placeholder="Password..." id="password_field"/>
+                <div style="display: flex;  ">
+                    <button id="btnLogin" onclick="login()">Submit</button>
+                    <button id="btnSignUp">Sign Up</button>
+                </div>
+                
+                
+           
+            </div>
+            
+
+          
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA2-WiU92TS0NR9M53GLuNvMl-qAbrpBHg",
+    authDomain: "fir-practice-login.firebaseapp.com",
+    databaseURL: "https://fir-practice-login.firebaseio.com",
+    projectId: "fir-practice-login",
+    storageBucket: "",
+    messagingSenderId: "132117579593",
+    appId: "1:132117579593:web:64ffdd2771314b21"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-firestore.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
